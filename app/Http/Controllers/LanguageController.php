@@ -19,7 +19,7 @@ class LanguageController extends Controller
 
     public function lang()
     {
-        dd(currency(12.00, 'USD', 'INR'));
+        //dd(currency(12.00, 'USD', 'INR'));
         return view('lang');
     }
 }
