@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('about', 'PagesController@index');
+Route::post('charge', 'PaymentsController@store');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/lang', 'LanguageController@lang')->middleware('lang');
+Route::get('{locale}', 'LanguageController@index');
